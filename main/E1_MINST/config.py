@@ -14,4 +14,4 @@
 class config():
 
     input_data_folder = '../data/MNIST'
-    output_data_folder = './output'
+    output_data_folder = './output/'
