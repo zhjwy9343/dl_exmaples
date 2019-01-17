@@ -43,14 +43,17 @@ import tarfile
 from six.moves import urllib
 import tensorflow as tf
 
-import cifar10_input
+from main.E2_CIFAR_ImageNet import cifar10_input
+from main.E2_CIFAR_ImageNet.config import config
 
 FLAGS = tf.app.flags.FLAGS
+DATA_PATH = config.input_data_folder
+BATCH_SIZE = config.batch_size
 
 # Basic model parameters.
-tf.app.flags.DEFINE_integer('batch_size', 128,
+tf.app.flags.DEFINE_integer('batch_size', BATCH_SIZE,
                             """Number of images to process in a batch.""")
-tf.app.flags.DEFINE_string('data_dir', '/tmp/cifar10_data',
+tf.app.flags.DEFINE_string('data_dir', DATA_PATH,
                            """Path to the CIFAR-10 data directory.""")
 tf.app.flags.DEFINE_boolean('use_fp16', False,
                             """Train the model using fp16.""")
