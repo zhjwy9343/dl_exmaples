@@ -23,7 +23,7 @@ def main():
         filename = ['A.jpg', 'B.jpg', 'C.jpg']
         full_filename = [base_folder+f for f in filename]
         # string_input_producer会产生一个文件名队列
-        filename_queue = tf.train.string_input_producer(full_filename, shuffle=True, num_epochs=2)
+        filename_queue = tf.train.string_input_producer(full_filename, shuffle=True, num_epochs=3)
         # reader从文件名队列中读数据。对应的方法是reader.read
         reader = tf.WholeFileReader()
         key, value = reader.read(filename_queue)
