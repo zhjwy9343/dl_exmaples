@@ -15,5 +15,6 @@ class config():
 
     input_data_folder = '../data/CIFAR10'
     output_data_folder = './output'
-    max_steps = 100000
-    batch_size = 128
+    eval_output_folder = './output/cifar10_eval'
+    max_steps = 400000
+    batch_size = 1024
